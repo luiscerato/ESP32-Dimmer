@@ -1,0 +1,223 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+  text-align: center; 
+  min-width: 700px;
+  max-width: 1200px;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 10px 20px 8px 20px;
+  text-align: center;
+  background: #003f76;
+  color: #ffffff;
+  border-bottom-left-radius: 15px; 
+  border-top-left-radius: 15px; 
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #208000;
+  border-bottom-left-radius: 15px; 
+  border-top-left-radius: 15px; 
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 15px 25px 14px 25px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #20f000;
+  color: white;
+}
+
+
+/* Main column */
+.main {
+  flex: 100%;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Estilo general de tabla*/
+table {
+  border-collapse:collapse;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+/* Estilo de encabezado de tabla*/
+th {
+  text-align: center;
+  padding: 8px;
+  background-color: #003f76;
+  color: aliceblue;
+}
+
+/* Estilo de cuerpo de tabla*/
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+/* Estilo de primer columna de cuerpo de tabla*/
+table td:first-child {
+  color: white;
+  background-color : #003f76;
+  font-weight: bold;
+  width: 150px;
+}
+table td:last-child {
+  width: 150px;
+}
+
+th:first-child { 
+  border-top-left-radius: 10px; 
+}
+th:last-child {   
+  border-top-right-radius: 10px; 
+}
+tr:last-child td:first-child { 
+  border-bottom-left-radius: 10px; 
+}
+tr:last-child td:last-child { 
+  border-bottom-right-radius: 10px; 
+}
+
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 50px;
+}
+
+h5 {
+  font-family: "Merriweather";
+  font-size: 15px;
+}
+
+.boton {
+  border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+  background-color: #003f76; /*color botón*/
+  color: #ffffff; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  border-radius: 50px; /*bordes redondos*/
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 30px;
+  width: 70%;
+}
+
+.boton boton:hover {
+  border: 1px solid #ffffff; /*anchura, estilo y color borde*/
+  background-color: #003f76; /*color botón*/
+}
+
+.botongrande {
+  font-family: "Merriweather", serif;
+  font-size: 50px;
+  border: 3px solid #2e518b; /*anchura, estilo y color borde*/
+  background-color: #003f76; /*color botón*/
+  color: #ffffff; /*color texto*/
+  text-shadow: 2px 2px #000000;
+  border-radius: 5px; /*bordes redondos*/
+  margin: 10px;
+  height: 80%;
+  width: 70%;
+}
+
+.botongrande:hover {
+  border: 3px solid #0060c0; /*anchura, estilo y color borde*/
+  background-color: #0078c0; /*color botón*/
+}
+
+
+.opciones  {
+  text-align: right;
+  border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+  margin-bottom: 10px;
+  border-radius: 50px; /*bordes redondos*/
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25);
+  background-color: #808080;
+  padding: 5px;
+  display: flex;
+}
+
+.leftThing {
+  width: 25%;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  width: 50%;
+}
+
+.rightThing {
+  width: 25%;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+  height: 30px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 35px; /* Set a specific slider handle width */
+  height: 35px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

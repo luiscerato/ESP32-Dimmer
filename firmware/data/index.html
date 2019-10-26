@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16 32x32 64x64 128x128 256x256">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <div class="header">
+        <h1>Wifi AC dimmer</h1>
+        <h5>Controla tu energía!.</h5>
+      </div>
+      <!-- Navigation Bar -->
+      <div class="navbar">
+        <a href="index.html">Comandos</a>
+        <a href="estado.html">Estado</a>
+        <a href="config.html">Configuración</a>
+        <a href=""></a>
+      </div>
+    </div>
+
+    <div class="cmd">
+      <input class="botongrande" type="button" value="Apagar todo" id="cmd1" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 100%" id="cmd2" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 80%" id="cmd3" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 60%" id="cmd4" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 45%" id="cmd5" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 35%" id="cmd6" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 25%" id="cmd7" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 15%" id="cmd8" onclick="OnBtnCmdClick(this);">
+      <input class="botongrande" type="button" value="Luces 10%" id="cmd9" onclick="OnBtnCmdClick(this);">
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+      <h5>ESP32 AC Dimmer web server. Versión de prueba</h5>
+      <h5><div id=ip_address></div></h5>
+    </div>
+  </body>
+</html>

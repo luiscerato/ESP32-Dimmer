@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16 32x32 64x64 128x128 256x256">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div>
+    <div class="header">
+      <h1>Wifi AC dimmer</h1>
+      <h5>Controla tu energía!.</h5>
+    </div>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="index.html">Comandos</a>
+      <a href="estado.html">Estado</a>
+      <a href="config.html">Configuración</a>
+      <a href=""></a>
+    </div>
+    </div>
+
+    <div class="main">
+
+      <!-- <div id="AJAXresponse">AJAXresponse...</div> -->
+      <div class="opciones">
+        <div class='leftThing'></div>
+        <div class='content'>Valores actuales de salida</div>
+        <div class='rightThing'>
+          <select id="update_speed" onChange='ComoBoxSpeed(this)' >
+            <option value="speed1">Lento</option>
+            <option value="speed2">Medio</option>
+            <option value="speed3">Rápido</option>
+            <option value="speed4">Muy rápido</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <table>
+          <tr>
+            <th>Salida</th>
+            <th colspan="2">Valor dimmer</th>
+            <th>On/Off</th>
+          </tr>
+          <tr>
+            <td>Salida 1 </td>
+            <td id="out1" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out1" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out1" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 2 </td>
+            <td id="out2" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out2" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out2" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 3 </td>
+            <td id="out3" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out3" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out3" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 4 </td>
+            <td id="out4" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out4" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out4" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 5 </td>
+            <td id="out5" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out5" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out5" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 6 </td>
+            <td id="out6" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out6" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out6" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 7 </td>
+            <td id="out7" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out7" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out7" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 8 </td>
+            <td id="out8" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out8" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out8" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 9 </td>
+            <td id="out9" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out9" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out9" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+          <tr>
+            <td>Salida 10</td>
+            <td id="out10" width="80"> %</td>
+            <td><input type="range" min="0" max="100" value="0" class="slider" id="bar_out10" oninput="OnSliderChange(this)" onchange = "OnSliderChange(this, true)"></td>
+            <td><input class="boton" type="button" value="OFF" id="btn_out10" onclick="OnBtnOnOffClick(this);"></td>
+          </tr>
+
+        </table>
+        <p></p>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <h5>ESP32 AC Dimmer web server. Versión de prueba</h5>
+      <h5><div id=ip_address></div></h5>
+    </div>    
+  </body>
+</html>
