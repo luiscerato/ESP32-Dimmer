@@ -14,6 +14,7 @@
 #include "ir_remote.h"
 #include <PubSubClient.h>
 #include "esp_system.h"
+#include "esp_wifi.h"
 
 
 // Your WiFi credentials.
@@ -64,6 +65,7 @@ void setup()
 	if (Use_Static_IP) {
 		if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
 			Serial.println("STA Failed to configure");
+      esp_wifi_set_ps (WIFI_PS_NONE);
 		}
 	}
 
@@ -73,6 +75,7 @@ void setup()
 	Serial.print("Connecting to ");
 	Serial.println(ssid);
 	WiFi.begin(ssid, pass);
+      esp_wifi_set_ps (WIFI_PS_NONE);
 
 	Serial.println("Ready");
 	Serial.print("IP address: ");
@@ -98,8 +101,8 @@ void setup()
 	Init_NeoPixel();
 
 	//Configurar MQTT
-	client.setServer(mqtt_server, 1883);
-	client.setCallback(MQTTonNewMessage);
+//	client.setServer(mqtt_server, 1883);
+//	client.setCallback(MQTTonNewMessage);
 }
 
 uint8_t colors[12];
@@ -112,7 +115,7 @@ void loop() {
 	OTA.run();
 	Remote.run();
 
-	MQTTLoop();
+	//MQTTLoop();
 
 	//  static uint16_t last_out = 0;
 	//  if (Dimmer.getOutVal(7) != last_out) {
